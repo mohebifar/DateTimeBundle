@@ -8,4 +8,4 @@ Currently drivers are :
 Documentation
 ======
 
-Read master documentation
+[Read master documentation](https://github.com/mohebifar/DateTimeBundle/blob/master/Resources/doc/index.md)
