@@ -123,5 +123,6 @@ Add this in `<head>` block :
     {{ form_datetime_css(form) }}
     
 Then add this right after the line jQuery is included :
+
      {{ form_datetime_js_asset(form) }}
      {{ form_datetime_js(form) }}
