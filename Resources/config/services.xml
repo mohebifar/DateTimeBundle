@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <!--
+    <parameters>
+        <parameter key="mohebifar_date_time.example.class">Mohebifar\DateTimeBundle\Example</parameter>
+    </parameters>
+
+    <services>
+        <service id="mohebifar_date_time.example" class="%mohebifar_date_time.example.class%">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+
+    <services>
+        <service id="mohebifar.datetime.form.date_type" class="Mohebifar\DateTimeBundle\Form\DateTimeType">
+            <argument type="service" id="mohebifar.datetime" />
+            <tag name="form.type" alias="mohebifar_datetime" />
+        </service>
+
+        <service id="mohebifar.datetime" class="Mohebifar\DateTimeBundle\Calendar\Proxy">
+            <argument>%mohebifar_datetime.driver%</argument>
+        </service>
+
+        <service id="mohebifar.datetime.twig" class="Mohebifar\DateTimeBundle\Twig\Extension\DateTimeFilterExtension">
+            <tag name="twig.extension" />
+            <argument type="service" id="twig.form.renderer" />
+            <argument type="service" id="mohebifar.datetime" />
+        </service>
+    </services>
+</container>

@@ -1,0 +1,57 @@
+{% set jquery_once = false %}
+
+{% block mohebifar_datetime_widget %}
+    {% if form.vars.widget == 'choice' %}
+        {{ block('date_widget') }}
+    {% elseif form.vars.widget == 'jquery' %}
+        {{ block('form_widget_simple') }}
+        <div id="{{ form.vars.id }}_picker"></div>
+    {% endif %}
+{% endblock mohebifar_datetime_widget %}
+
+{% block _form_css %}
+    {% stylesheets
+    '@MohebifarDateTimeBundle/Resources/public/css/jquery.calendars.picker.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock _form_css %}
+
+{% block form_javascript_asset %}
+    {% spaceless %}
+        {% javascripts
+        '@MohebifarDateTimeBundle/Resources/public/js/jquery.plugin.min.js'
+        '@MohebifarDateTimeBundle/Resources/public/js/jquery.calendars.all.min.js'
+        '@MohebifarDateTimeBundle/Resources/public/js/jquery.calendars.persian.min.js' %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% if app.request.locale == 'fa' %}
+
+            {% javascripts
+            '@MohebifarDateTimeBundle/Resources/public/js/i18n/jquery.calendars.persian-fa.js'
+            '@MohebifarDateTimeBundle/Resources/public/js/i18n/jquery.calendars.picker-fa.js'
+            '@MohebifarDateTimeBundle/Resources/public/js/i18n/jquery.calendars-fa.js' %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_javascript_asset %}
+
+{% block form_datetime_js %}
+    {% spaceless %}
+        {% for child in form %}
+            {{ form_datetime_js(child) }}
+        {% endfor %}
+    {% endspaceless %}
+{% endblock form_datetime_js %}
+
+{% block mohebifar_datetime_datetime_js %}
+    {% if form.vars.widget is defined and form.vars.widget == 'jquery' %}
+        <script>
+            {% spaceless %}
+            var calendar = $.calendars.instance('persian');
+            $('#{{ form.vars.id }}').calendarsPicker({calendar: calendar});
+            {% endspaceless %}
+        </script>
+    {% endif %}
+{% endblock %}
