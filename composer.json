@@ -1,0 +1,37 @@
+{
+    "name": "mohebifar/date-time-bundle",
+    "type": "symfony-bundle",
+    "description": "DateTimeBundle is a Symfony2 bundle which helps you to show Datetimes based on a calendar and provides a DatePicker (Choice and jQuery DatePicker) Form type. CalendarBundle uses a strategy that allows you to make your arbitary calendar driver.",
+    "keywords": ["datepicker", "datetime", "datepicker formtype", "calendar", "hejri", "persian calendar", "gregorian"],
+    "homepage": "http://mohebifar.ir",
+    "license": "BSD",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Mohamad Mohebifar",
+            "homepage": "https://mohebifar.ir"
+        }
+    ],
+    "archive": {
+        
+    },
+    "require": {
+        "php":                      ">=5.3.2",
+        "symfony/framework-bundle": ">=2.0.16,~2.0"
+    },
+
+    "require-dev": {
+        "twig/twig":                ">=1.0,<2.0-dev",
+        "symfony/yaml":             ">=2.0.16,~2.0"
+    },
+
+    "suggest": {
+        "twig/twig":                ">=1.0,<2.0-dev"
+    },
+
+    "autoload": {
+        "psr-0": { "Mohebifar\\CalendarBundle": "" }
+    },
+
+    "target-dir": "Mohebifar/CalendarBundle"
+}
