@@ -17,12 +17,12 @@
     },
     "require": {
         "php":                      ">=5.3.2",
-        "symfony/framework-bundle": ">=2.0.16,~2.0"
+        "symfony/framework-bundle": ">=2.0.16,~2.0",
+        "twig/twig":                ">=1.0,<2.0-dev",
+        "symfony/yaml":             ">=2.0.16,~2.0"
     },
 
     "require-dev": {
-        "twig/twig":                ">=1.0,<2.0-dev",
-        "symfony/yaml":             ">=2.0.16,~2.0"
     },
 
     "suggest": {
@@ -30,8 +30,8 @@
     },
 
     "autoload": {
-        "psr-0": { "Mohebifar\\CalendarBundle": "" }
+        "psr-0": { "Mohebifar\\DateTimeBundle": "" }
     },
 
-    "target-dir": "Mohebifar/CalendarBundle"
+    "target-dir": "Mohebifar/DateTimeBundle"
 }
