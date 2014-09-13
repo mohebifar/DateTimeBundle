@@ -37,7 +37,7 @@ class DateTimeToArrayTransformer extends BaseDateTimeTransformer
     /**
      * Constructor.
      *
-     * @param Service $date
+     * @param Proxy $date
      * @param string  $inputTimezone  The input timezone
      * @param string  $outputTimezone The output timezone
      * @param array   $fields         The date fields
@@ -175,7 +175,7 @@ class DateTimeToArrayTransformer extends BaseDateTimeTransformer
         $value['minute'] = empty($value['minute']) ? '0' : $value['minute'];
         $value['second'] = empty($value['second']) ? '0' : $value['second'];
         try {
-            $dateTime = $this->date->mktime($value['hour'], $value['minute'], $value['second'], $value['month'], $value['day'], $value['year']);
+            $dateTime = $this->date->makeTime($value['hour'], $value['minute'], $value['second'], $value['month'], $value['day'], $value['year']);
 
             if ($this->inputTimezone !== $this->outputTimezone) {
                 $dateTime->setTimezone(new \DateTimeZone($this->inputTimezone));
