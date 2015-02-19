@@ -22,7 +22,7 @@ class Proxy {
     /**
      * Create an instance of DriverFacade for this proxy by given driver name
      *
-     * @param $driver The name of driver
+     * @param string $driver name of driver
      * @throws ClassNotFoundException
      */
     public function __construct($driver) {

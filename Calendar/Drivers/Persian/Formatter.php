@@ -167,8 +167,8 @@ class Formatter
      * i: Minutes with leading zeros
      * s: Seconds with leading zeros
      * </pre>
-     * @param type $format
-     * @return type
+     * @param string $format
+     * @return string
      */
     public function format($format)
     {
