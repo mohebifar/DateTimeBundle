@@ -20,7 +20,7 @@ class Proxy {
     private $driver;
 
     /**
-     * Create an instance of this driver by given driver name
+     * Create an instance of DriverFacade for this proxy by given driver name
      *
      * @param $driver The name of driver
      * @throws ClassNotFoundException
