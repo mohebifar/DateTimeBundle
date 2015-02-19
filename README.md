@@ -1,6 +1,6 @@
 [![Total Downloads](https://poser.pugx.org/mohebifar/date-time-bundle/downloads.svg)](https://packagist.org/packages/mohebifar/date-time-bundle) [![License](https://poser.pugx.org/mohebifar/date-time-bundle/license.svg)](https://packagist.org/packages/mohebifar/date-time-bundle)
 
-DateTimeBundle is a Symfony2 bundle which helps you to show Datetimes based on a calendar and provides a DatePicker (Choice and jQuery DatePicker) Form type. CalendarBundle uses a strategy that allows you to make your arbitary calendar driver.
+DateTimeBundle is a Symfony2 bundle which helps you to show Datetimes based on a calendar and provides a DatePicker Form type (Choice and jQuery DatePicker). CalendarBundle uses a strategy that allows you to make your arbitary calendar driver.
 
 Currently drivers are :
 
