@@ -11,13 +11,13 @@
         "hejri",
         "gregorian"
     ],
-    "homepage": "http://mohebifar.ir",
+    "homepage": "https://mohebifar.com",
     "license": "BSD",
     "minimum-stability": "dev",
     "authors": [
         {
             "name": "Mohamad Mohebifar",
-            "homepage": "https://mohebifar.ir"
+            "homepage": "https://mohebifar.com"
         }
     ],
     "archive": {},
