@@ -27,7 +27,7 @@ class Proxy {
      */
     public function __construct($driver) {
 
-        if(is_class($driver)) {
+        if(class_exists($driver)) {
             $class = $driver;
         } else {
             $class = "Mohebifar\\DateTimeBundle\\Calendar\\Drivers\\{$driver}\\DriverFacade";
