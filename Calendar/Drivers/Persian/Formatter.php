@@ -106,7 +106,7 @@ class Formatter
         $seconds = floor($timestamp % 60);
         $minutes = floor(( $timestamp % 3600 ) / 60);
         $hours = floor(( $timestamp % 86400 ) / 3600);
-        $days = floor($timestamp / 86400) + 287;
+        $days = floor($timestamp / 86400) + 288;
 
         $years = floor(($days / self::$khayamYear) - ($days * self::$khayamYearCorrection));
         $dayOfYear = $days - round($years * self::$khayamYear, 0);
@@ -244,17 +244,17 @@ class Formatter
 
         return ($yearStartDay + $dayOfYear) % 7;
     }
-    
+
     private function getDayInWeekName($type = "long") {
         $day = $this->dayOfWeek();
         return self::$words['week'][$type][$day];
     }
-    
+
     private function getMonthName($type = "long") {
         $month = $this->representation->getMonth();
         return self::$words['month'][$type][$month -1];
     }
-    
+
     private function getDayNumberWord() {
         $day = $this->representation->getDay();
         return self::$words['number'][$day];
